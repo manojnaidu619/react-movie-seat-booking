@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React from "react"
 import Seat from './Seat'
 import './styles/Seat.css'
 
