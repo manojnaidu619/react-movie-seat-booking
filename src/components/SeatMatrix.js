@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, {useContext} from "react"
 import Seat from './Seat'
 import './styles/Seat.css'
 

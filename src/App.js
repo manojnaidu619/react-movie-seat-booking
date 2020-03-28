@@ -10,7 +10,7 @@ import MovieContext from './contexts/MovieContext'
 
 const App = () => {
 
-	const [movies, switchMovies] = useState({
+	const [movies, EditMovies] = useState({
 		movieNames: {
 			"Bloodshot": 10,
 			"The girl on the Train": 8,
@@ -20,16 +20,19 @@ const App = () => {
 		},
 		moviePrice: 0,
 		totalPrice: 0,
-		totalSeats: 0
+		totalSeats: 0,
+		seatNumbers: []
 	})
-
+	console.log(movies.seatNumbers)
 	return (
 		<div className="main container">
-			<MovieContext.Provider value={movies}>
+			<MovieContext.Provider value={{movies, changeState: EditMovies }}>
 				<MovieSelector />
 				<SeatAvailability />
 				<SeatMatrix />
 				<PriceCalculator />
+				{movies.moviePrice}
+				{movies.totalSeats}
 			</MovieContext.Provider>
 		</div>
 	)

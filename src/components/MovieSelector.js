@@ -1,9 +1,10 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import MovieContext from "../contexts/MovieContext"
 
 const Header = () => {
 
-	const movies = useContext(MovieContext)
+	const { movies } = useContext(MovieContext)
+	const movieData = useContext(MovieContext)
 
 	const GenerateOptions = () => {
 		const moviesObject = movies.movieNames
@@ -12,9 +13,14 @@ const Header = () => {
 		})
 	}
 
+	const movieSwitchHandler = (e) => {
+		const newMoviePrice = movies.movieNames[e.target.value]
+		movieData.changeState({...movies, moviePrice: newMoviePrice})
+	}
+
 	return (
 		<div className="container" style={{textAlign: "center"}}>
-			<select onChange={(e) => console.log(movies.movieNames[e.target.value])}>
+			<select onChange={movieSwitchHandler}>
 				{GenerateOptions()}
 			</select>
 		</div>
