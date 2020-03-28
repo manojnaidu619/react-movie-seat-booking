@@ -1,16 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import MovieContext from "../contexts/MovieContext"
 
 const Header = () => {
-	const [movies, switchMovies] = useState({
-		movieNames: {
-			"Bloodshot": 10,
-			"The girl on the Train": 8,
-			"The invisible Man": 11,
-			"Onward": 12,
-			"My Spy": 12
-		}
-	})
+
+	const movies = useContext(MovieContext)
 
 	const GenerateOptions = () => {
 		const moviesObject = movies.movieNames
@@ -21,7 +14,7 @@ const Header = () => {
 
 	return (
 		<div className="container" style={{textAlign: "center"}}>
-			<select onChange={(e) => console.log(e.target.value)}>
+			<select onChange={(e) => console.log(movies.movieNames[e.target.value])}>
 				{GenerateOptions()}
 			</select>
 		</div>
