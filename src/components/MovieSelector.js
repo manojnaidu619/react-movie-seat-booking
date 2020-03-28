@@ -9,7 +9,7 @@ const Header = () => {
 	const GenerateOptions = () => {
 		const moviesObject = movies.movieNames
 		return Object.keys(moviesObject).map((movie, key) => {
-			return <option value={movie} key={key}>{movie}</option>
+			return <option value={movie} key={key}>{movie} - ${moviesObject[movie]}</option>
 		})
 	}
 
@@ -19,7 +19,7 @@ const Header = () => {
 	}
 
 	return (
-		<div className="container" style={{textAlign: "center"}}>
+		<div className="container" style={{ textAlign: "center" }}>
 			<select onChange={movieSwitchHandler}>
 				{GenerateOptions()}
 			</select>

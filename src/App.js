@@ -18,12 +18,11 @@ const App = () => {
 			"Onward": 12,
 			"My Spy": 12
 		},
-		moviePrice: 0,
-		totalPrice: 0,
+		moviePrice: 10,
 		totalSeats: 0,
 		seatNumbers: []
 	})
-	console.log(movies.seatNumbers)
+
 	return (
 		<div className="main container">
 			<MovieContext.Provider value={{movies, changeState: EditMovies }}>
@@ -31,8 +30,6 @@ const App = () => {
 				<SeatAvailability />
 				<SeatMatrix />
 				<PriceCalculator />
-				{movies.moviePrice}
-				{movies.totalSeats}
 			</MovieContext.Provider>
 		</div>
 	)

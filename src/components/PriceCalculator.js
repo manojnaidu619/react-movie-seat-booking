@@ -1,7 +1,14 @@
-import React from "react"
+import React, {useContext} from "react"
+import MovieContext from "../contexts/MovieContext"
 
 const PriceCalculator = () => {
-	return <div>PriceCalculator</div>
+	const {movies} = useContext(MovieContext)
+	console.log(movies)
+	return (
+		<div>
+			<p>Selected {movies.totalSeats} seats and the total price is {movies.totalSeats*movies.moviePrice}</p>
+		</div>
+	)
 }
 
 export default PriceCalculator
