@@ -24,3 +24,7 @@
 .seat-black{
     background-color: black;
 }
+.seat-undefined{
+    cursor: auto;
+    pointer-events: none;
+}

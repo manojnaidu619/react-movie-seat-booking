@@ -5,13 +5,16 @@ import './styles/Seat.css'
 
 const Seat = (props) => {
 
+    console.log(props)
+
     const { movies } = useContext(MovieContext)
     const context = useContext(MovieContext)
 
     const seatNumber = props.seatno
-    let seatStatus = "seat-grey"
+    const seatStatus = props.seatColor ? props.seatColor : "seat-grey" 
 
-    const seatClickHandler = (seatNumber) => {
+    const seatClickHandler = (event, seatNumber) => {
+        event.stopPropagation()
         const seatColor = document.querySelector(`.seat-${seatNumber}`).classList
         if (movies.seatNumbers.includes(seatNumber)) {
             const newMovieSeats = movies.seatNumbers.filter((seat) => {
@@ -30,7 +33,7 @@ const Seat = (props) => {
     return (
         <div className="col-md-2">
             <div className={`seat seat-${seatNumber} ${seatStatus}`}
-                onClick={() => seatClickHandler(props.seatno)} />
+                onClick={(e) => seatClickHandler(e,props.seatno)} />
         </div>
     )
 }
