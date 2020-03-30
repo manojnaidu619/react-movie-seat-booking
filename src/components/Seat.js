@@ -4,9 +4,6 @@ import MovieContext from "../contexts/MovieContext"
 import './styles/Seat.css'
 
 const Seat = (props) => {
-
-    console.log(props)
-
     const { movies } = useContext(MovieContext)
     const context = useContext(MovieContext)
 
@@ -31,7 +28,7 @@ const Seat = (props) => {
     }
 
     return (
-        <div className="col-md-2">
+        <div className="col-2 col-md-2">
             <div className={`seat seat-${seatNumber} ${seatStatus}`}
                 onClick={(e) => seatClickHandler(e,props.seatno)} />
         </div>

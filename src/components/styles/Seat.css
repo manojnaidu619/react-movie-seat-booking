@@ -1,3 +1,6 @@
+.movie-layout{
+    flex-wrap: nowrap;
+}
 .col-md-2{
     padding: 0px 10px;
 }
