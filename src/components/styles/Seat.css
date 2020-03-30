@@ -31,3 +31,7 @@
     cursor: auto;
     pointer-events: none;
 }
+.movie-complex p{
+    text-align: center;
+    font-size: 20px;
+}

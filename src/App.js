@@ -5,6 +5,7 @@ import MovieSelector from "./components/MovieSelector"
 import SeatAvailability from "./components/SeatAvailability"
 import SeatMatrix from "./components/SeatMatrix"
 import PriceCalculator from "./components/PriceCalculator"
+import GithubLogo from './components/GithubLogo'
 
 import MovieContext from './contexts/MovieContext'
 
@@ -25,10 +26,11 @@ const App = () => {
 
 	return (
 		<div className="main container">
-			<MovieContext.Provider value={{movies, changeState: EditMovies }}>
+			<MovieContext.Provider value={{ movies, changeState: EditMovies }}>
+				<GithubLogo/>
 				<MovieSelector />
-				<SeatAvailability />
 				<SeatMatrix />
+				<SeatAvailability />
 				<PriceCalculator />
 			</MovieContext.Provider>
 		</div>
