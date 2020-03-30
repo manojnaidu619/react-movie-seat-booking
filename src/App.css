@@ -7,5 +7,13 @@
 	height: 600px;
 	justify-content: space-evenly;
 	margin: 3% auto;
-	background-color: red;
+	background-color: #f3f3f3;
+	border-radius: 10px;
+	color: #464159;
+}
+
+@media(max-width: 768px){
+	.main{
+		background-color: transparent;
+	}
 }

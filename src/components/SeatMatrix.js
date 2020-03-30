@@ -16,7 +16,7 @@ const GenerateSeats = (seatNumbers) => {
 
 const SeatMatrix = () => {
 	return (
-		<div class="movie-complex">
+		<div className="movie-complex">
 			<p>Screen This way!</p>
 			<div className="container row movie-layout">
 				<div className="movie-column-1">

@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import MovieContext from "../contexts/MovieContext"
+import "./styles/Seat.css"
 
 const Header = () => {
 
@@ -20,7 +21,7 @@ const Header = () => {
 
 	return (
 		<div className="container" style={{ textAlign: "center" }}>
-			<select onChange={movieSwitchHandler}>
+			<select className="movie-selector" onChange={movieSwitchHandler}>
 				{GenerateOptions()}
 			</select>
 		</div>
