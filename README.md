@@ -1,7 +1,4 @@
 ## Movie Seat Booking App
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-
-## Movie Seat Booking App
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) 
 
 [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://react-movie-seat-booking.now.sh/)
